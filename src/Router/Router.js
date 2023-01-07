@@ -1,9 +1,9 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom"
 import Root from "../components/Root/Root";
-import Topics from "../components/Topics/Topics";
+import Topics from "../components/Topics/Topics"
 import About from '../components/About/About'
-import Statistics from "../components/Statistics/Statistics";
-import Blog from "../components/Blog/Blog";
+import Statistics from "../components/Statistics/Statistics"
+import Blog from "../components/Blog/Blog"
 
 
 export const router = createBrowserRouter([
@@ -17,22 +17,23 @@ export const router = createBrowserRouter([
                 element: <Topics></Topics>,
             },
             {
+                path: 'topics',
+                element: <Topics></Topics>,
+                loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+            },
+            {
                 path: 'about',
                 element: <About></About>
             },
             {
-                path: 'topics',
-                element: <Topics></Topics>
-            },
-            {
                 path: 'statistics',
-                element: <Statistics></Statistics>
+                element: <Statistics></Statistics>,
             },
             {
                 path: 'blog',
-                element: <Blog></Blog>
-            }
+                element: <Blog></Blog>,
+            },
 
-        ]
+        ],
     },
 ])
