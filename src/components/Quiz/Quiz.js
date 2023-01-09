@@ -6,7 +6,7 @@ const Quiz = () => {
     const loaderData = useLoaderData()
     const qst = loaderData.data;
     const questions = qst.questions;
-    console.log(questions)
+    //  console.log(questions)
     return (
         <div>
             {
